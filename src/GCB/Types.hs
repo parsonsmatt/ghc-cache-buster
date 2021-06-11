@@ -6,6 +6,7 @@ module GCB.Types
 import GCB.Prelude
 
 import GCB.Types.Foo as X
+import GCB.Types.FooExplicit as X
 import GCB.Types.Quuz as X
 
 data DefinedInTypes = DefinedInTypes Int Char

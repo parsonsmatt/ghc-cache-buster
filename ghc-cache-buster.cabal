@@ -26,10 +26,12 @@ source-repository head
 library
   exposed-modules:
       GCB.App
+      GCB.Explicit
       GCB.Prelude
       GCB.Types
       GCB.Types.Bar
       GCB.Types.Foo
+      GCB.Types.FooExplicit
       GCB.Types.Quuz
       GCB.Web
   other-modules:
