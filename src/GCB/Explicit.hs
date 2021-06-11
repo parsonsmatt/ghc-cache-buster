@@ -9,7 +9,7 @@ import GCB.Types.Quuz (compileQuuz, blargh)
 app :: IO ()
 app = do
     putStrLn "Hello, World!"
-    -- let x = [compileQuuz|asdf|]
+    let x = [compileQuuz|asdf|]
     let foo = mkFoo "asdf"
     putStrLn "Goodbye, World!"
 

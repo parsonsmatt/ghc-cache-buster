@@ -144,3 +144,16 @@ Let's see if we can isolate which of the two features causes it - the top level 
 Commenting out `blargh` and modifying `FooExplicit` causes the same recompilation behavior.
 Putting `blargh` back in, commenting out the `let x = [compileQuuz|asdf|]`, and modifying `FooExplicit` causes *the same recompilation behavior*.
 What exactly is causing this?
+
+# Template Haskell Investigation
+
+I would *not* expect that `GCB.Explicit` needs to recompile because `GCB.Types.FooExplicit` has a *non-public facing change*.
+So what's going on?
+
+One hypothesis is that a non-public change (eg adding a top-level term) could potentially affect TH, if it adds a type class instance, and that TH code is reifying on type classes.
+That's actually pretty possible!
+To work around this, I made a change to `FooExplicit` that *could not possibly* introduce a type class instance - a `where x = 2` clause on `getFooExplicit`.
+
+This... causes the same recompilation behavior when it is commented or uncommented.
+Even just adding a comment to the file triggers a recompilation.
+What's going on here?
