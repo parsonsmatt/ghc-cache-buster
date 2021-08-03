@@ -13,5 +13,6 @@ app = do
         foo = mkFoo "asdf"
         fooExplicit = mkFooExplicit "asdf"
     putStrLn "Goodbye, World!"
+    putStrLn "uh what"
 
 blargh

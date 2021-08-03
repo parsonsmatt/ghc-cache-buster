@@ -11,8 +11,8 @@ mkFooExplicit = FooExplicit
 
 getFooExplicit :: FooExplicit -> String
 getFooExplicit (FooExplicit str) = str
-  where x = 2 :: Int
+  -- where x = 2 :: Int
 
--- wtf
 
--- addingThingFooExplicit = 3
+addingThingFooExplicit = 3
+  -- where x = 2 :: Int

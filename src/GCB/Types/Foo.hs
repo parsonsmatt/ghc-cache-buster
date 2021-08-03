@@ -7,5 +7,3 @@ mkFoo = Foo
 
 getFoo :: Foo -> String
 getFoo (Foo str) = str
-
--- addingThing = 3

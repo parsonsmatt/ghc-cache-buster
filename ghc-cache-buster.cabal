@@ -33,6 +33,7 @@ library
       GCB.Types.Foo
       GCB.Types.FooExplicit
       GCB.Types.Quuz
+      GCB.Types.QuuzDep
       GCB.Web
   other-modules:
       Paths_ghc_cache_buster

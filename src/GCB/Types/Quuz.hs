@@ -1,4 +1,5 @@
 {-# language DeriveLift #-}
+{-# language TemplateHaskell, QuasiQuotes #-}
 
 module GCB.Types.Quuz
     ( Quuz
@@ -12,6 +13,8 @@ import GCB.Prelude
 
 import Language.Haskell.TH.Syntax
 import Language.Haskell.TH.Quote
+
+-- asdf
 
 data Quuz = Quuz String
     deriving Lift
